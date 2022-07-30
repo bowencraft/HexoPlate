@@ -1,0 +1,15 @@
+name: HexoPlate
+version: '${project.version}'
+main: com.bowencraft.hexoplate.HexoPlate
+api-version: 1.19
+authors: [ Bo_Wen ]
+description: Create hexagonal grids and plates for players to unlock, extend and upgrade.
+website: hexoplate.bowen-craft.com
+depend:
+  - FastAsyncWorldEdit
+commands:
+  hexoplate:
+    description: Main command for hexoplate.
+    aliases:
+      - hexo
+      - hex

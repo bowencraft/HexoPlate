@@ -1,3 +1,6 @@
+# Maven
+pom.xml
+pom.xml
 target/
 pom.xml.tag
 pom.xml.releaseBackup
@@ -9,3 +12,20 @@ buildNumber.properties
 .mvn/timing.properties
 # https://github.com/takari/maven-wrapper#usage-without-binary-jar
 .mvn/wrapper/maven-wrapper.jar
+
+
+# Intellij
+*.iml
+
+#Java
+*.class
+*.jar
+
+# MacOS
+.DS_Store
+.DS_Store?
+._*
+
+# Windows
+Thumbs.db
+[Dd]esktop.ini

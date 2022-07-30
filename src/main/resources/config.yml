@@ -1,0 +1,60 @@
+#    __ __             ___  __     __
+#   / // /____ _____  / _ \/ /__ _/ /____
+#  / _  / -_) \ / _ \/ ___/ / _ `/ __/ -_)
+# /_//_/\__/_\_\\___/_/  /_/\_,_/\__/\__/
+version: 0.1
+
+message-language: en_US # en_US, zh_CN
+plugin-prefix: "§f[§6Hexo§ePlate§f] §a"
+
+height: 64 # y-axis
+maximum: 10 # maximum * width should not larger than border
+world: bskyblock_world
+radius: 40 # Preset for max polar plate radius when generating hexoplate convert list.
+
+border-access: true
+
+plate-length: 17
+plate-width: 20
+plate-schem-group: default
+
+players-interval: 500
+
+Plate-list:
+  17*20:
+    default:
+      background:
+        status: true
+        schem-file: default_bg.schem
+        ignore-air: true
+#        border-calculation: # 2d-array of 20*4
+#          L1: 5,4,4,3,3,2,2,1,1,0,0,0,1,1,2,2,3,3,4,4
+#          L2: 6,6,5,5,4,4,3,3,2,2,1,2,2,3,3,4,4,5,5,6
+#          L3: 0,0,1,1,2,2,3,3,4,4,5,4,4,3,3,2,2,1,1,0
+#          L4: 1,2,2,3,3,4,4,5,5,6,6,6,5,5,4,4,3,3,2,2
+      type:
+        default:
+          schem-files-list:
+            - 17*20-blue01.schem #浅蓝
+            - 17*20-blue02.schem #深蓝
+            - 17*20-green.schem #深绿
+            - 17*20-purple01.schem #紫
+            - default.schem #浅绿
+          schem-ignore-air: true
+          upgrade:
+            0:
+              depth-level: 0
+              height-level: 0
+            1:
+              depth-level: 1
+              height-level: 1
+      depth-level:
+        maximum: 1
+        0: 64
+        1: 32
+        2: 0
+      height-level:
+        maximum: 1
+        0: 96
+        1: 128
+        2: 160
