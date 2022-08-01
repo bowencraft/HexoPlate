@@ -2,30 +2,54 @@
 #   / // /____ _____  / _ \/ /__ _/ /____
 #  / _  / -_) \ / _ \/ ___/ / _ `/ __/ -_)
 # /_//_/\__/_\_\\___/_/  /_/\_,_/\__/\__/
+# Author: Bo_Wen
 version: 0.1
 
-message-language: en_US # en_US, zh_CN
+message-language: en_US
+# Message file in the locale folder.
+# Option: en_US, zh_CN (Unavailable now)
+
 plugin-prefix: "§f[§6Hexo§ePlate§f] §a"
 
-height: 64 # y-axis
-maximum: 10 # maximum * width should not larger than border
+height: 64
+# Y-axis that plate will be created.
+
+maximum: 10
+# Affect maximum number of the polarX (radius).
+# Maximum * plate-width should not larger than player-interval.
+
 world: bskyblock_world
-radius: 40 # Preset for max polar plate radius when generating hexoplate convert list.
+# World that hexoplate will affect.
+
+radius: 40
+# Preset for max polar plate radius when generating hexoplate convert list.
+# Should be larger than or equal to player-interval / plate-width.
 
 border-access: true
+# Whether detect interaction with the border.
+# If true, when the event happened in the border which are between two unlocked plate, it wouldn't be cancel.
 
 plate-length: 17
 plate-width: 20
+# The width and length of a plate in schem.
+# Shouldn't be changed until in future.
+
 plate-schem-group: default
+# Group of the schem under length * width set up above.
+# Make it possible to have multiple groups in the config at the same time.
 
 players-interval: 500
+# Interval between two players's central plate.
 
 Plate-list:
   17*20:
     default:
       background:
+        # Setting of the background. A background schem will be generated when a player create the new plate grid.
+        # Sequence: 1. Generate background schem. 2. Generate plate schem. 3. Teleport player.
         status: true
         schem-file: default_bg.schem
+        # When the option is true, the generating will ignore the air in the schem.
         ignore-air: true
 #        border-calculation: # 2d-array of 20*4
 #          L1: 5,4,4,3,3,2,2,1,1,0,0,0,1,1,2,2,3,3,4,4
@@ -35,20 +59,21 @@ Plate-list:
       type:
         default:
           schem-files-list:
-            - 17*20-blue01.schem #浅蓝
-            - 17*20-blue02.schem #深蓝
-            - 17*20-green.schem #深绿
-            - 17*20-purple01.schem #紫
-            - default.schem #浅绿
+            # Plate schem file list.
+            # You can list multiple filenames here to make generator randomly choose from them each time.
+            - default.schem
           schem-ignore-air: true
           upgrade:
             0:
+              # Initial level of a plate.
               depth-level: 0
               height-level: 0
             1:
               depth-level: 1
               height-level: 1
       depth-level:
+        # Available block range of each level.
+        # Level larger than maximum will not be effective.
         maximum: 1
         0: 64
         1: 32
