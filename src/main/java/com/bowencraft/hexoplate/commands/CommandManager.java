@@ -35,7 +35,7 @@ public class CommandManager implements CommandExecutor {
         // if (sender instanceof Player){
 //            Player p = (Player) sender;
             boolean cmdexist = false;
-            if (sender.hasPermission("hexoplate.commands.help")) {
+            if (sender.hasPermission("hexoplate.commands.main")) {
                 if (args.length > 0){
                     for (int i = 0; i < getSubcommands().size(); i++){
                         if (args[0].equalsIgnoreCase(getSubcommands().get(i).getName())){
@@ -57,16 +57,21 @@ public class CommandManager implements CommandExecutor {
 
                     }
                 }else if(args.length == 0){
-                    sender.sendMessage(messages.get().getString("Command-Separator-Head"));
-                    for (int i = 0; i < getSubcommands().size(); i++){
-                        if (sender.hasPermission(getSubcommands().get(i).getPermission())) {
-                            String msg = messages.get().getString("Help-Command-Info");
-                            String context = MessageFormat.format(msg, getSubcommands().get(i).getSyntax(), getSubcommands().get(i).getDescription());
-                            sender.sendMessage(context);
-                            // sender.sendMessage(getSubcommands().get(i).getSyntax() + " - " + getSubcommands().get(i).getDescription());
+                    if (sender.hasPermission("hexoplate.commands.help")) {
+                        sender.sendMessage(messages.get().getString("Command-Separator-Head"));
+                        for (int i = 0; i < getSubcommands().size(); i++){
+                            if (sender.hasPermission(getSubcommands().get(i).getPermission())) {
+                                String msg = messages.get().getString("Help-Command-Info");
+                                String context = MessageFormat.format(msg, getSubcommands().get(i).getSyntax(), getSubcommands().get(i).getDescription());
+                                sender.sendMessage(context);
+                                // sender.sendMessage(getSubcommands().get(i).getSyntax() + " - " + getSubcommands().get(i).getDescription());
+                            }
                         }
+                        sender.sendMessage(messages.get().getString("Command-Separator-Foot"));
+                    } else {
+                        sender.sendMessage(messages.get().getString("No-Permission-Help"));
                     }
-                    sender.sendMessage(messages.get().getString("Command-Separator-Foot"));
+
                 }
 
             } else {

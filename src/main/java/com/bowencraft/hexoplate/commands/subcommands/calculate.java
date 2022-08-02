@@ -57,7 +57,10 @@ public class calculate extends SubCommand {
                         executer.sendMessage(pluginprefix + "Polar:" + args[2] + ", " + args[3] + "Central Position: " + loc[0] + ", " + loc[1]);
                     }
                 } else {
-                    executer.sendMessage(pluginprefix + "Use /hexoplate HexoplateCommand <type> <x> <y>.");
+                    executer.sendMessage(pluginprefix + messages.get().getString("Arguments-Missing"));
+                    String usage = messages.get().getString("Command-Usage");
+                    String context2 = MessageFormat.format(usage, getSyntax());
+                    executer.sendMessage(pluginprefix + context2);
                 }
             }
         } else {

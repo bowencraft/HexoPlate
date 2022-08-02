@@ -30,7 +30,7 @@ public class upgrade extends SubCommand {
 
     @Override
     public String getSyntax() {
-        return "/hexoplate upgrade <player name> <PolarX> <PolarZ> <py>";
+        return "/hexoplate upgrade <player name> <PolarX> <PolarZ> <Level>";
     }
 
 
