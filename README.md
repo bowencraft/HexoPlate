@@ -19,7 +19,7 @@ Spigot 1.13-1.19 （tested in paper/purpur 1.19 Server）
 
 ## Coordinate System (0,0 for the central plate)
 
-![image-20220801232238137](/Users/bowenwang/Library/Application Support/typora-user-images/image-20220801232238137.png)
+![image-20220801232238137](https://raw.githubusercontent.com/bowencraft/HexoPlate/main/utils/image-20220801232238137.png)
 
 
 
