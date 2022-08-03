@@ -1,4 +1,6 @@
 # Hexoplate
+![2022-08-02-11.43.26](https://raw.githubusercontent.com/bowencraft/HexoPlate/main/utils/2022-08-02-11.43.26.png)
+
 ## Description
 
 HexoPlate is a Minecraft plugin that provides hexagonal plate terrain for island-style servers. With the plugin, players are able to create, upgrade and extend plates in a hexagonal grid centered on their island.
@@ -13,7 +15,7 @@ Spigot 1.13-1.19 （tested in paper/purpur 1.19 Server）
 
 ## Plates
 
-/
+![2022-08-02_23.41.42](https://raw.githubusercontent.com/bowencraft/HexoPlate/main/utils/2022-08-02_23.41.42.png)
 
 
 
